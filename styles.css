@@ -4,4 +4,8 @@
   font-size: 20px;
   font-weight: 100;
   font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+h1 {
+  color: azure;
 }
