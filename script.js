@@ -21,7 +21,7 @@ function computerPlay() {
 
 const computer = computerPlay();
 const playerSelection = "rock"; 
-let player = playerSelection.toLocaleLowerCase();
+const player = playerSelection.toLocaleLowerCase();
 
 
 
@@ -51,10 +51,12 @@ function playRound(player, computer) {
 }
 
 
-let game = 5;
 
-    for (let i = 1; i < game; i++) {
-        alert(playRound(player, computer));
+
+    function game(x) {
+        for (let i = 1; i < x; i++) {
+            console.log(i + " Round " + playRound(player, computer));
+        }
     }
 
-    
+   game(4)
