@@ -20,10 +20,12 @@ function computerPlay() {
 
 
 const computer = computerPlay();
-const player = "rock"; 
+const playerSelection = "rock"; 
+let player = playerSelection.toLocaleLowerCase();
 
-console.log(computer)
-console.log(player)
+
+
+//console.log(playRound(player, computer));
 
 // function that takes the player and computers input, compares the 2 and determines the winner
 
@@ -32,11 +34,27 @@ console.log(player)
 
 function playRound(player, computer) {
     if (player === computer) {
-        console.log("Tie!")
+        return "Tie!"
     } else if (player === "rock" && computer === "scissors") {
-        console.log("wow")
-    }
+        return "You Win! Rock beats Scissors!";
+    } else if (player === "rock" && computer === "paper") {
+        return "You Lose! Paper beats Rock!";
+    } else if (player === "paper" && computer === "rock") {
+        return "You Win! Paper beats Rock!";
+    } else if (player === "paper" && computer === "scissors") {
+        return "You Lose! Scissors beats Paper!";
+    } else if (player === "scissors" && computer === "rock") {
+        return "You Lose! Rock beats Scissors!";
+    } else if (player === "scissors" && computer === "paper") {
+        return "You win! Scissors beats Paper!";
+    } else { return "You have put in the wrong input." };
 }
 
 
-playRound(player, computer)
+let game = 5;
+
+    for (let i = 1; i < game; i++) {
+        alert(playRound(player, computer));
+    }
+
+    
