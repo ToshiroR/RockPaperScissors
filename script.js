@@ -5,32 +5,35 @@
 
 
 
+
+const computer = computerPlay();
+
+// asks the player what it wants to do and runs the playRound() function
+
+const playerSelection = prompt("Choose your weapon!");
+const player = playerSelection.toLowerCase();
+if (player == "rock" || "paper" || "scissors") {
+    alert(playRound(player, computer));
+} 
 // function that returns rock paper scissors!
 
 function computerPlay() {
-   let play = Math.floor(Math.random() * 3)
- if (play === 1){
-    return "rock";
-} else if (play === 2) {
-    return "paper";
-} else {
-    return "scissors";
-}
-};
+    const play = Math.floor(Math.random() * 3)
+  if (play === 1){
+     return "rock";
+ } else if (play === 2) {
+     return "paper";
+ } else {
+     return "scissors";
+ }
+ };
 
 
-const computer = computerPlay();
-const playerSelection = "rock"; 
-const player = playerSelection.toLocaleLowerCase();
-
-
-
-//console.log(playRound(player, computer));
 
 // function that takes the player and computers input, compares the 2 and determines the winner
 
 
-//function playRound(player, computer)
+
 
 function playRound(player, computer) {
     if (player === computer) {
@@ -51,7 +54,7 @@ function playRound(player, computer) {
 }
 
 
-
+playRound(player, computer)
 
     function game(x) {
         for (let i = 1; i < x; i++) {
